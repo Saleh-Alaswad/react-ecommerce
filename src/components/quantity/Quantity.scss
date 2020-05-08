@@ -1,0 +1,18 @@
+.quantity-input {
+  // padding: 5px;
+  display: flex;
+  // display: flex;
+  // background: red;
+
+  .modifier-input {
+    margin: 0 5px;
+  }
+  .quantity-input_screen {
+    color: black;
+    font-weight: 800;
+    font-size: large;
+    width: 30px;
+    background: transparent;
+    border: none;
+  }
+}

@@ -1,0 +1,31 @@
+.header {
+  margin: 0 auto;
+  width: 90%;
+  height: 7vh;
+  padding: 5px /* 25px */;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // position: sticky;
+  // top: 0;
+  .logo {
+    margin: 0;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+  }
+  .app-bar {
+    flex-direction: column;
+    position: absolute;
+    display: flex;
+    max-width: 30%;
+    top: 5px;
+    right: 5px;
+
+    .options {
+      flex-direction: row;
+      display: flex;
+      cursor: pointer;
+    }
+  }
+}

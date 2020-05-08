@@ -1,0 +1,18 @@
+.icon-button {
+    flex-direction: row;
+    display: flex;
+    // width: 100%;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0 5px;
+    span {
+        padding: 10px 5px;
+        // font-size: 1.5rem;
+    }
+    p {
+        padding: 0 5px;
+        margin: auto;
+        // font-weight: 100;
+        font-size: large /* r */;
+    }
+}

@@ -1,0 +1,39 @@
+.signup {
+  display: flex;
+  justify-content: center;
+  flex: 0.5;
+  .form {
+    padding: 10px;
+    form {
+      flex-direction: column;
+      input {
+        padding: 15px;
+        margin: 10px;
+        border: 1px gray solid;
+        &:focus {
+          border: 1px tomato solid;
+          outline: none;
+        }
+      }
+      .input-type {
+        margin: 0;
+        margin-left: 10px;
+        display: flex;
+        color: gray;
+        // font-size: small;
+        &::after {
+          content: "*";
+          color: red;
+        }
+      }
+      button {
+        padding: 10px;
+        font-weight: 700;
+        height: 50px;
+        margin: 0;
+        border-radius: 100px;
+        outline: none;
+      }
+    }
+  }
+}

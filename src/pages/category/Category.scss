@@ -1,0 +1,40 @@
+.category {
+  .main {
+    background-color: grey;
+    display: grid;
+    grid-template-areas:
+      "s f f f f f f"
+      "s c c c c c c"
+      "s c c c c c c";
+    grid-gap: 5px;
+    .filter {
+      grid-area: f;
+      width: 100%;
+      position: sticky;
+      top: 0;
+    }
+    .menu-bar {
+      background-color: red;
+      grid-area: s;
+      ul,
+      li {
+        list-style-type: none;
+        cursor: pointer;
+        text-align: start;
+        padding: 0 5px;
+        text-transform: none;
+        color: #222;
+        display: block;
+        font-size: 13px;
+        line-height: 24px;
+        text-decoration: none;
+      }
+    }
+    .content {
+      background-color: yellow;
+      grid-area: c;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}

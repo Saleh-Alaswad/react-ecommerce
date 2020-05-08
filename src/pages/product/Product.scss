@@ -1,0 +1,101 @@
+.main {
+  padding: 10px;
+  margin: 0 auto;
+  flex-direction: column;
+  .menu {
+    margin: 0 auto;
+    width: 80vw;
+    display: flex;
+    margin-top: 20px;
+    font-size: medium;
+  }
+  .product {
+    margin: 20px auto;
+    display: flex;
+    width: 80vw;
+    .info {
+      flex: 0.5;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      position: relative;
+      top: 10vh;
+      .title {
+        display: flex;
+        align-items: center;
+        width: 25vw;
+        justify-content: space-between;
+        .fav {
+          background-color: transparent;
+          border: none;
+          // color: red;
+        }
+      }
+      .price {
+        margin: 20px 0;
+        justify-content: space-evenly;
+        display: flex;
+        align-items: baseline;
+        font-size: 20px;
+        line-height: 26px;
+        text-align: left;
+        margin-top: 15px;
+        .price-value {
+          padding: 10px;
+          color: red;
+          font-weight: bold;
+        }
+        .price-value-original {
+          padding: 10px;
+          text-decoration: line-through;
+        }
+        .percentage-discount {
+          padding: 10px;
+          color: red;
+          font-weight: bold;
+          background: rgba(red, 0.4);
+        }
+      }
+      .selector {
+        font-size: small;
+        display: flex;
+        justify-content: space-evenly;
+        .reactSelect {
+          background: transparent;
+          font-weight: 600;
+          width: 300px;
+          outline: none;
+          color: black;
+          font-size: medium;
+          margin: 0 10px;
+        }
+        button {
+          margin: 0 10px;
+          font-weight: 800;
+          outline: none;
+          padding: 10px;
+          background: gray;
+          color: black;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+      p {
+        text-align: left;
+        margin-top: 5vh;
+      }
+    }
+    .image-container {
+      flex-direction: column;
+      img {
+        padding: 10px;
+      }
+      display: flex;
+      align-items: center;
+      flex: 0.5;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+}
