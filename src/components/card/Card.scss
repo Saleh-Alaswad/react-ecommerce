@@ -1,5 +1,6 @@
 $border-color: tomato;
 .card {
+  z-index: 1;
   margin: 10px auto;
   padding: 5px;
   display: flex;

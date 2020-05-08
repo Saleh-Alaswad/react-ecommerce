@@ -8,6 +8,7 @@
       "s c c c c c c";
     grid-gap: 5px;
     .filter {
+      z-index: 2;
       grid-area: f;
       width: 100%;
       position: sticky;
