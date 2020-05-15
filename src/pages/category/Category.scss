@@ -1,6 +1,5 @@
 .category {
   .main {
-    background-color: grey;
     display: grid;
     grid-template-areas:
       "s f f f f f f"
@@ -15,7 +14,6 @@
       top: 0;
     }
     .menu-bar {
-      background-color: red;
       grid-area: s;
       ul,
       li {
@@ -32,7 +30,6 @@
       }
     }
     .content {
-      background-color: yellow;
       grid-area: c;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;

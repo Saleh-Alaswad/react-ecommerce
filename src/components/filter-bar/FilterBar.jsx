@@ -1,12 +1,15 @@
 import React from 'react'
 import './FilterBar.scss'
+import FilterMenu from '../filter-menu/FilterMenu'
+import Dropdown from '../Dropdown';
 const FilterBar = ({ }) => {
     return (
         <div className="filter-bar">
-            <div className="filter">SORT BY</div>
-            <div className="filter">PRODUCT TYPE</div>
-            <div className="filter">STYLE</div>
-            <div className="filter">COLOR</div>
+            <Dropdown />
+            <Dropdown />
+            <Dropdown />
+            <Dropdown />
+
         </div>
     );
 }

@@ -1,9 +1,12 @@
 .filter-bar {
     padding: 10px;
-    background-color: green;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    position: sticky;
+
+    position: absolute;
+    left: 0;
+    right: 0;
     top: 0;
+    flex-wrap: wrap;
 }
