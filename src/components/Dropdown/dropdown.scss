@@ -1,31 +1,27 @@
 .dd-wrapper {
-  background-color: green;
+  // background-color: green;
   height: fit-content;
   .dd-header {
-    background-color: cyan;
+    // background-color: cyan;
     &__action {
-      background-color: red;
+      // background-color: red;
       width: 15vw;
     }
   }
 
   .dd-list {
-    background-color: tomato;
+    // background-color: tomato;
     display: flex;
     flex-direction: column;
     li {
-      background-color: blue;
+      // background-color: blue;
       list-style-type: none;
-      // &:last-of-type > button {
-      //   background-color: red;
-      // }
-
       button {
         width: 100%;
         padding: 10px;
         &:hover,
         &:focus {
-          background-color: gold;
+          // background-color: gold;
         }
       }
     }

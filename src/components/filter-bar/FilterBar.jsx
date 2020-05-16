@@ -1,7 +1,6 @@
 import React from 'react'
 import './FilterBar.scss'
-import FilterMenu from '../filter-menu/FilterMenu'
-import Dropdown from '../Dropdown';
+import Dropdown from '../Dropdown/Dropdown';
 const FilterBar = ({ }) => {
     return (
         <div className="filter-bar">
@@ -9,7 +8,6 @@ const FilterBar = ({ }) => {
             <Dropdown />
             <Dropdown />
             <Dropdown />
-
         </div>
     );
 }

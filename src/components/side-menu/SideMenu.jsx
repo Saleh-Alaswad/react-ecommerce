@@ -38,23 +38,23 @@ const SideMenu = ({ match, className }) => {
     return (
         <div className={className}>
             <nav>
-                <ul >
-                    <li >
-                        <strong >New Arrivals</strong>
-                        <ul >
-                            {list.newArrivals.map(product => <li ><Link to={`${match.url}/${product}`} >{product}</Link></li>)}
+                <ul  >
+                    <li  >
+                        <strong key={11} >New Arrivals</strong>
+                        <ul key={12} >
+                            {list.newArrivals.map((product, i) => <li key={product + i} ><Link to={`${match.url}/${product}`} >{product}</Link></li>)}
                         </ul>
                     </li>
-                    <li >
+                    <li key={2} >
                         <strong >Product</strong>
                         <ul >
-                            {list.product.map(product => <li ><Link to={`${match.url}/${product}`} >{product}</Link></li>)}
+                            {list.product.map((product, i) => <li key={product + i} ><Link to={`${match.url}/${product}`} >{product}</Link></li>)}
                         </ul>
                     </li>
-                    <li >
+                    <li key={3} >
                         <strong >Sale</strong>
                         <ul >
-                            {list.sale.map(product => <li ><Link to={`${match.url}/${product}`} >{product}</Link></li>)}
+                            {list.sale.map((product, i) => <li key={product + i} ><Link to={`${match.url}/${product}`} >{product}</Link></li>)}
                         </ul>
                     </li>
                 </ul>

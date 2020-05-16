@@ -9,7 +9,6 @@ import { withRouter } from 'react-router';
 import Product from './pages/product/Product';
 import Footer from './components/footer/Footer';
 import './pages/main/Main.scss';
-import Dropdown from './components/Dropdown.jsx'
 
 class App extends React.Component {
   render() {
