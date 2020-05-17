@@ -5,6 +5,8 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
+import FormGroup from '@material-ui/core/FormGroup';
+import Checkbox from '@material-ui/core/Checkbox';
 const ITEMS = [
   { id: 1, value: 'Recommended' },
   { id: 2, value: 'Newest' },
@@ -12,13 +14,18 @@ const ITEMS = [
   { id: 4, value: 'Highest Price' }
 ]
 
-const Dropdown = ({ title = 'Dropdown', items = ITEMS, multiSelect = false }) => {
+const Dropdown = ({ title = 'Filter', items = ITEMS, multiSelect = true }) => {
   const [open, setOpen] = useState(false)
-  const [value, setValue] = useState(items[0].value);
+  const [selection, setSelection] = useState([])
 
-  const handleChange = (event) => setValue(event.target.value)
-
+  const handleSingleSelection = event => {
+    setSelection([{ [event.target.value]: true }])
+  }
+  const handleMultiSelection = event => {
+    setSelection([...selection, { [event.target.name]: event.target.checked }])
+  }
   const toggle = () => setOpen(!open)
+
 
   return (
     <div className='dd-wrapper' >
@@ -32,9 +39,9 @@ const Dropdown = ({ title = 'Dropdown', items = ITEMS, multiSelect = false }) =>
           <div className="dd-list">{
             <li className="dd-list-item">
               <FormControl component="fieldset">
-                <RadioGroup aria-label={title} onChange={handleChange}>
+                <RadioGroup aria-label={title} onChange={handleSingleSelection}>
                   {items.map(item =>
-                    <FormControlLabel checked={item.value === value} key={item.id} value={item.value} control={<Radio />} label={item.value} />
+                    <FormControlLabel checked={selection.some(select => select[`${item.value}`])} key={item.id} value={item.value} control={<Radio />} label={item.value} />
                   )}
                 </RadioGroup>
               </FormControl>
@@ -44,12 +51,16 @@ const Dropdown = ({ title = 'Dropdown', items = ITEMS, multiSelect = false }) =>
         {open && multiSelect && (
           <div className="dd-list">{
             <li className="dd-list-item">
-              <FormControl component="fieldset">
-                <RadioGroup aria-label={title} onChange={handleChange}>
+              <FormControl component="fieldset" >
+                <FormGroup>
                   {items.map(item =>
-                    <FormControlLabel checked={item.value === value} key={item.id} value={item.value} control={<Radio />} label={item.value} />
+                    <FormControlLabel
+                      key={item.id}
+                      control={<Checkbox checked={selection.some(select => select[`${item.value}`])} onChange={handleMultiSelection} name={item.value} />}
+                      label={item.value}
+                    />
                   )}
-                </RadioGroup>
+                </FormGroup>
               </FormControl>
             </li>
           }</div>
